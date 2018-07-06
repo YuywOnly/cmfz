@@ -11,8 +11,10 @@
 	<link rel="icon" href="${pageContext.request.contextPath}/img/favicon.ico" type="image/x-icon" />
 	<link rel="stylesheet" href="${pageContext.request.contextPath}/css/common.css" type="text/css"></link>
 	<link rel="stylesheet" href="${pageContext.request.contextPath}/css/login.css" type="text/css"></link>
+
 	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/themes/default/easyui.css">
 	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/themes/IconExtension.css">
+
 	<script type="text/javascript"
 			src="${pageContext.request.contextPath}/js/jquery.min.js"></script>
 	<script type="text/javascript"
@@ -46,12 +48,12 @@
 							}else if ( $("#managerPassword").val()==""){
                                 $.messager.alert("提示","密码不能为空","info");
                                 return false;
-							}else if($("#code").val()==""){
-                                $.messager.alert("提示","验证码不能为空","info");
-                                return false;
-							} else{
-                                return $("#loginForm").form("validate");
-							}
+							}else if($("#code").val()=="") {
+                                $.messager.alert("提示", "验证码不能为空", "info");
+                            }else{
+                                 return $("#loginForm").form("validate");
+                            }
+
 
                         },
                         success:function(data){
