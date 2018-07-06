@@ -11,6 +11,8 @@
 	<link rel="icon" href="${pageContext.request.contextPath}/img/favicon.ico" type="image/x-icon" />
 	<link rel="stylesheet" href="${pageContext.request.contextPath}/css/common.css" type="text/css"></link>
 	<link rel="stylesheet" href="${pageContext.request.contextPath}/css/login.css" type="text/css"></link>
+	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/themes/default/easyui.css">
+	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/themes/IconExtension.css">
 	<script type="text/javascript"
 			src="${pageContext.request.contextPath}/js/jquery.min.js"></script>
 	<script type="text/javascript"
@@ -35,17 +37,17 @@
                 text:"提交",
                 onClick:function() {
                     $("#loginForm").form("submit",{
-                        url:"http://localhost:8088/cmfz/manager/login.do",
+                        url:"${pageContext.request.contextPath}/manager/login.do",
                         onSubmit: function(){
                             console.log("提交前执行");
                             if($("#managerName").val()==""){
-                                alert("用户名不能为空");
+                                $.messager.alert("提示","用户名不能为空","info");
 								return false;
 							}else if ( $("#managerPassword").val()==""){
-                                alert("密码不能为空");
+                                $.messager.alert("提示","密码不能为空","info");
                                 return false;
 							}else if($("#code").val()==""){
-                                alert("验证码不能为空");
+                                $.messager.alert("提示","验证码不能为空","info");
                                 return false;
 							} else{
                                 return $("#loginForm").form("validate");
@@ -57,9 +59,9 @@
                                 window.location.href="${pageContext.request.contextPath}/main.jsp"
                                 // alert('登录成功');
                             }else if (data=="codeFalse"){
-                                 alert('验证码错误');
+                                $.messager.alert("提示",'验证码错误',"info");
 							} else{
-                                alert('用户名或密码错误');
+                                $.messager.alert("提示",'用户名或密码错误',"info");
 
                             }
 

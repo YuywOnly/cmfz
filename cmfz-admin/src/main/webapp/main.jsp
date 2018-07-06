@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=utf-8"
-	pageEncoding="utf-8" isELIgnored="false"%>
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8" isELIgnored="false"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -10,13 +9,14 @@
 <script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery.min.js"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery.easyui.min.js"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath}/js/easyui-lang-zh_CN.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/js/datagrid-detailview.js"></script>
 <script type="text/javascript">
 
 	$(function(){
 
 	    $.ajax({
 	        type:"post",
-			url:"http://localhost:8088/cmfz/menu/showMenu.do",
+			url:"${pageContext.request.contextPath}/menu/showMenu.do",
 			success:function(message){
 	            console.log(message);
 
@@ -52,8 +52,7 @@
             $("#tt").tabs("add",{
                 title:res.text,
                 closable:true,
-                toolbar: "#ss",
-                <%--href:"${pageContext.request.contextPath}/"+url,--%>
+                href:"${pageContext.request.contextPath}/"+url,
 
             });
 		}

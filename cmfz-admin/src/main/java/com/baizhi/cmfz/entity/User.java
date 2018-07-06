@@ -1,6 +1,8 @@
 package com.baizhi.cmfz.entity;
 
-public class User {
+import java.io.Serializable;
+
+public class User implements Serializable {
     private String userId;
     private String UserName;
     private String userBuddhishName;

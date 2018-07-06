@@ -1,5 +1,5 @@
 <html>
 <body>
-    <%response.sendRedirect("/cmfz/login.jsp");%>
+    <%response.sendRedirect("/cmfz-admin/login.jsp");%>
 </body>
 </html>

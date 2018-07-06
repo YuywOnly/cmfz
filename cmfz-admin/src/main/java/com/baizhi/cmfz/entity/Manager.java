@@ -1,6 +1,8 @@
 package com.baizhi.cmfz.entity;
 
-public class Manager {
+import java.io.Serializable;
+
+public class Manager implements Serializable {
     private String managerId;
     private String managerName;
     private String managerPassword;
