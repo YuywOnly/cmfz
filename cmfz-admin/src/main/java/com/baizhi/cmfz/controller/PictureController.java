@@ -79,7 +79,7 @@ public class PictureController {
         //获得文件路径
         String realPath = session.getServletContext().getRealPath("/");
         //修改文件路径 将../cmfz-admin 换成 ../upload
-        String upload = realPath.replace("cmfz-admin", "upload");
+        String upload = realPath.replace("cmfz-admin", "upload/picture");
         //生成UUID作为文件名
         String pictureId = UUID.randomUUID().toString().replace("-", "");
         //获取文件名

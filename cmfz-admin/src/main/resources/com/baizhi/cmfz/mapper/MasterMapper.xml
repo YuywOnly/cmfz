@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "../mybatis-3-mapper.dtd" >
+<mapper namespace="com.baizhi.cmfz.dao.MasterDao">
+
+    <select id="selectMaster" resultType="Master">
+        SELECT * FROM t_master LIMIT #{nowRow} , #{pageSize}
+    </select>
+
+    <select id="selectById" resultType="Master">
+        SELECT * FROM `t_master` WHERE (`masterId`=#{masterId})
+    </select>
+
+    <select id="totalCount" resultType="java.lang.Integer">
+        select count(*) from t_master
+    </select>
+
+    <insert id="insertMaster" >
+        INSERT INTO t_master
+        VALUES
+        (
+        #{masterId},
+        #{masterName},
+        #{masterPhoto},
+        #{masterSummary}
+        )
+    </insert>
+
+    <update id="updateMaster">
+        UPDATE t_master
+        SET
+        masterName=#{masterName},
+        masterPhoto=#{masterPhoto},
+        masterSummary=#{masterSummary}
+        WHERE
+        masterId=#{masterId}
+    </update>
+
+    <delete id="deleteMaster">
+        DELETE FROM `t_master` WHERE (`masterId`=#{masterId})
+    </delete>
+
+    <select id="selectByName" resultType="Master">
+        SELECT * FROM t_master where masterName like CONCAT(CONCAT('%',#{masterName}),'%')
+        LIMIT #{nowRow} , #{pageSize}
+    </select>
+
+    <select id="selectByNameCount" resultType="java.lang.Integer">
+        SELECT count(*) FROM t_master where masterName like CONCAT(CONCAT('%',#{masterName}),'%')
+    </select>
+</mapper>
