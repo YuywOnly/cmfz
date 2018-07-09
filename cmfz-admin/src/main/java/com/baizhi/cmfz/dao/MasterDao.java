@@ -18,9 +18,11 @@ public interface MasterDao {
 
     public Master selectById(@Param("masterId") String masterId);
 
+    public List<Master> selectAll();
+
     public Integer totalCount();
 
-    public Integer insertMaster(Master master);
+    public Integer insertMaster(@Param("masters") List<Master> masters);
 
     public Integer updateMaster(Master master);
 
@@ -29,4 +31,6 @@ public interface MasterDao {
     public List<Master> selectByName(@Param("masterName") String masterName,@Param("nowRow")Integer nowRow, @Param("pageSize") Integer pageSize);
 
     public Integer selectByNameCount(@Param("masterName") String masterName);
+
+
 }

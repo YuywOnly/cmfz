@@ -17,13 +17,16 @@
     <insert id="insertMaster" >
         INSERT INTO t_master
         VALUES
-        (
-        #{masterId},
-        #{masterName},
-        #{masterPhoto},
-        #{masterSummary}
-        )
+        <foreach item="master" separator="," collection="masters">
+            (
+            #{master.masterId},
+            #{master.masterName},
+            #{master.masterPhoto},
+            #{master.masterSummary}
+            )
+        </foreach>
     </insert>
+
 
     <update id="updateMaster">
         UPDATE t_master
@@ -46,5 +49,10 @@
 
     <select id="selectByNameCount" resultType="java.lang.Integer">
         SELECT count(*) FROM t_master where masterName like CONCAT(CONCAT('%',#{masterName}),'%')
+    </select>
+
+
+    <select id="selectAll" resultType="Master">
+        SELECT * FROM `t_master`
     </select>
 </mapper>

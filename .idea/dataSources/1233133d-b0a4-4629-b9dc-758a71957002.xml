@@ -884,320 +884,325 @@
       <DataType>varchar(40)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="226" parent="205" name="articleContent">
+    <column id="226" parent="205" name="masterName">
       <Position>3</Position>
-      <DataType>varchar(150)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="227" parent="205" name="articleDate">
-      <Position>4</Position>
-      <DataType>date|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="228" parent="205" name="articlePic">
-      <Position>5</Position>
       <DataType>varchar(40)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="229" parent="205" name="PRIMARY">
+    <column id="227" parent="205" name="articleContent">
+      <Position>4</Position>
+      <DataType>text|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="228" parent="205" name="articleDate">
+      <Position>5</Position>
+      <DataType>date|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="229" parent="205" name="articleStatus">
+      <Position>6</Position>
+      <DataType>varchar(40)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="230" parent="205" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>articleId</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="230" parent="206" name="audioId">
+    <column id="231" parent="206" name="audioId">
       <Position>1</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="231" parent="206" name="audioName">
+    <column id="232" parent="206" name="audioName">
       <Position>2</Position>
       <DataType>varchar(50)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="232" parent="206" name="audioSinger">
+    <column id="233" parent="206" name="audioSinger">
       <Position>3</Position>
       <DataType>varchar(50)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="233" parent="206" name="audioAompose">
+    <column id="234" parent="206" name="audioAompose">
       <Position>4</Position>
       <DataType>varchar(50)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="234" parent="206" name="audioArrangement">
+    <column id="235" parent="206" name="audioArrangement">
       <Position>5</Position>
       <DataType>varchar(50)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="235" parent="206" name="audioProducer">
+    <column id="236" parent="206" name="audioProducer">
       <Position>6</Position>
       <DataType>varchar(50)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="236" parent="206" name="audioSize">
+    <column id="237" parent="206" name="audioSize">
       <Position>7</Position>
       <DataType>varchar(50)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="237" parent="206" name="audioPath">
+    <column id="238" parent="206" name="audioPath">
       <Position>8</Position>
       <DataType>varchar(50)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="238" parent="206" name="audioCount">
+    <column id="239" parent="206" name="audioCount">
       <Position>9</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="239" parent="206" name="PRIMARY">
+    <key id="240" parent="206" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>audioId</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="240" parent="207" name="categoryId">
+    <column id="241" parent="207" name="categoryId">
       <Position>1</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="241" parent="207" name="categoryName">
+    <column id="242" parent="207" name="categoryName">
       <Position>2</Position>
       <DataType>varchar(50)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="242" parent="207" name="userId">
+    <column id="243" parent="207" name="userId">
       <Position>3</Position>
       <DataType>varchar(50)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="243" parent="207" name="categoryStatus">
+    <column id="244" parent="207" name="categoryStatus">
       <Position>4</Position>
       <DataType>varchar(10)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="244" parent="207" name="PRIMARY">
+    <key id="245" parent="207" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>categoryId</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="245" parent="208" name="countId">
+    <column id="246" parent="208" name="countId">
       <Position>1</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="246" parent="208" name="counterName">
+    <column id="247" parent="208" name="counterName">
       <Position>2</Position>
       <DataType>varchar(50)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="247" parent="208" name="count">
+    <column id="248" parent="208" name="count">
       <Position>3</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="248" parent="208" name="categoryId">
+    <column id="249" parent="208" name="categoryId">
       <Position>4</Position>
       <DataType>varchar(50)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="249" parent="208" name="userid">
+    <column id="250" parent="208" name="userid">
       <Position>5</Position>
       <DataType>varchar(50)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="250" parent="208" name="countTime">
+    <column id="251" parent="208" name="countTime">
       <Position>6</Position>
       <DataType>datetime|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="251" parent="208" name="PRIMARY">
+    <key id="252" parent="208" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>countId</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="252" parent="209" name="managerId">
+    <column id="253" parent="209" name="managerId">
       <Position>1</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="253" parent="209" name="managerName">
+    <column id="254" parent="209" name="managerName">
       <Position>2</Position>
       <DataType>varchar(50)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="254" parent="209" name="managerPassword">
+    <column id="255" parent="209" name="managerPassword">
       <Position>3</Position>
       <DataType>varchar(50)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="255" parent="209" name="managerSalt">
+    <column id="256" parent="209" name="managerSalt">
       <Position>4</Position>
       <DataType>varchar(10)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="256" parent="209" name="managerStatus">
+    <column id="257" parent="209" name="managerStatus">
       <Position>5</Position>
       <DataType>varchar(5)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="257" parent="209" name="PRIMARY">
+    <key id="258" parent="209" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>managerId</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="258" parent="210" name="masterId">
+    <column id="259" parent="210" name="masterId">
       <Position>1</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="259" parent="210" name="masterName">
+    <column id="260" parent="210" name="masterName">
       <Position>2</Position>
       <DataType>varchar(32)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="260" parent="210" name="masterPhoto">
+    <column id="261" parent="210" name="masterPhoto">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="261" parent="210" name="masterrSummary">
+    <column id="262" parent="210" name="masterSummary">
       <Position>4</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="262" parent="210" name="PRIMARY">
+    <key id="263" parent="210" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>masterId</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="263" parent="211" name="menuId">
+    <column id="264" parent="211" name="menuId">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="264" parent="211" name="menuName">
+    <column id="265" parent="211" name="menuName">
       <Position>2</Position>
       <DataType>varchar(50)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="265" parent="211" name="menuCode">
+    <column id="266" parent="211" name="menuCode">
       <Position>3</Position>
       <DataType>varchar(50)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="266" parent="211" name="menuIcon">
+    <column id="267" parent="211" name="menuIcon">
       <Position>4</Position>
       <DataType>varchar(100)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="267" parent="211" name="menuUrl">
+    <column id="268" parent="211" name="menuUrl">
       <Position>5</Position>
       <DataType>varchar(100)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="268" parent="211" name="menuLevel">
+    <column id="269" parent="211" name="menuLevel">
       <Position>6</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="269" parent="211" name="menuParentId">
+    <column id="270" parent="211" name="menuParentId">
       <Position>7</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="270" parent="211" name="PRIMARY">
+    <key id="271" parent="211" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>menuId</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="271" parent="212" name="pictureId">
+    <column id="272" parent="212" name="pictureId">
       <Position>1</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="272" parent="212" name="picturePath">
+    <column id="273" parent="212" name="picturePath">
       <Position>2</Position>
       <DataType>varchar(100)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="273" parent="212" name="pictureDate">
+    <column id="274" parent="212" name="pictureDate">
       <Position>3</Position>
       <DataType>datetime|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="274" parent="212" name="pictureDescription">
+    <column id="275" parent="212" name="pictureDescription">
       <Position>4</Position>
       <DataType>varchar(100)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="275" parent="212" name="pictureStatus">
+    <column id="276" parent="212" name="pictureStatus">
       <Position>5</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="276" parent="212" name="PRIMARY">
+    <key id="277" parent="212" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>pictureId</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="277" parent="213" name="userId">
+    <column id="278" parent="213" name="userId">
       <Position>1</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="278" parent="213" name="userName">
+    <column id="279" parent="213" name="userName">
       <Position>2</Position>
       <DataType>varchar(20)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="279" parent="213" name="userBuddhishName">
+    <column id="280" parent="213" name="userBuddhishName">
       <Position>3</Position>
       <DataType>varchar(20)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="280" parent="213" name="userPassword">
+    <column id="281" parent="213" name="userPassword">
       <Position>4</Position>
       <DataType>varchar(20)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="281" parent="213" name="userSex">
+    <column id="282" parent="213" name="userSex">
       <Position>5</Position>
       <DataType>varchar(5)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="282" parent="213" name="userPhoto">
+    <column id="283" parent="213" name="userPhoto">
       <Position>6</Position>
       <DataType>varchar(100)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="283" parent="213" name="userAddress">
+    <column id="284" parent="213" name="userAddress">
       <Position>7</Position>
       <DataType>varchar(50)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="284" parent="213" name="userPhone">
+    <column id="285" parent="213" name="userPhone">
       <Position>8</Position>
       <DataType>varchar(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="285" parent="213" name="userSignature">
+    <column id="286" parent="213" name="userSignature">
       <Position>9</Position>
       <DataType>varchar(100)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="286" parent="213" name="userStatus">
+    <column id="287" parent="213" name="userStatus">
       <Position>10</Position>
       <DataType>tinyint(1)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="287" parent="213" name="PRIMARY">
+    <key id="288" parent="213" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>userId</ColNames>
       <Primary>1</Primary>

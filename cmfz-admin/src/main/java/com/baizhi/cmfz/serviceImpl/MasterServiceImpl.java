@@ -44,11 +44,13 @@ public class MasterServiceImpl implements MasterService {
     }
 
     @Override
-    public boolean addMaster(Master master) {
-        String masterId = UUID.randomUUID().toString().replace("-", "");
-        master.setMasterId(masterId);
+    public boolean addMaster(List<Master> masters) {
+        for (Master master :masters) {
+            String masterId = UUID.randomUUID().toString().replace("-", "");
+            master.setMasterId(masterId);
+        }
 
-        Integer result = masterDao.insertMaster(master);
+        Integer result = masterDao.insertMaster(masters);
         if(result>0){
             return true;
         }else{
@@ -86,5 +88,10 @@ public class MasterServiceImpl implements MasterService {
         pictureMap.put("total", count);
         pictureMap.put("rows", masters);
         return pictureMap;
+    }
+
+    @Override
+    public List<Master> findAll() {
+        return masterDao.selectAll();
     }
 }

@@ -58,9 +58,9 @@ public class MasterExcelImportController {
             for (Master master : successList) {
                 log.info("成功列表信息:" + master);
                 System.out.println(master);
-                masterService.addMaster(master);
 
             }
+            masterService.addMaster(successList);
             for (Master master : failList) {
                 log.info("失败列表信息:" + master);
             }

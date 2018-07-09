@@ -14,6 +14,7 @@ import org.springframework.web.multipart.MultipartFile;
 import javax.servlet.http.HttpSession;
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.UUID;
@@ -89,7 +90,10 @@ public class MasterController {
         file.transferTo(new File(upload + pictureId + suffix ));
 
         master.setMasterPhoto(pictureId + suffix);
-        boolean b = masterService.addMaster(master);
+
+        List<Master> masters = new ArrayList<Master>();
+        masters.add(master);
+        boolean b = masterService.addMaster(masters);
 
         return b+"";
     }
@@ -132,4 +136,12 @@ public class MasterController {
         return JSON.toJSONString(masterMap);
     }
 
+
+
+    @RequestMapping(value ="/findAll",produces = "application/json;charset=utf-8")
+    @ResponseBody
+    public String findAll(){
+        List<Master> all = masterService.findAll();
+        return JSON.toJSONString(all);
+    }
 }

@@ -19,11 +19,13 @@ public interface MasterService {
 
     public Master queryMasterById(String masterId);
 
-    public boolean addMaster(Master master);
+    public boolean addMaster(List<Master> masters);
 
     public boolean modifyMaster(Master master);
 
     public boolean removeMaster(String masterId);
 
     public Map<String, Object> queryMasterByName(String manterName,Integer nowPage, Integer pageSize);
+
+    public List<Master> findAll();
 }
