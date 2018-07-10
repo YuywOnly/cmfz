@@ -1,6 +1,8 @@
 package com.baizhi.cmfz.entity;
 
 
+import com.alibaba.fastjson.annotation.JSONField;
+
 import java.util.Date;
 
 public class Article {
@@ -10,6 +12,7 @@ public class Article {
     private String masterId;
     private String masterName;
     private String articleContent;
+    @JSONField(format = "yyyy-MM-dd HH:mm:ss")
     private Date articleDate;
     private String articleStatus;
 

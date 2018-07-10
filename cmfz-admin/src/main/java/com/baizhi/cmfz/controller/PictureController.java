@@ -92,6 +92,9 @@ public class PictureController {
         picture.setPicturePath(pictureId + suffix);
         boolean b = pictureService.addPicture(picture);
 
+
+        System.out.println(upload + pictureId + suffix);
+
         return b+"";
     }
 

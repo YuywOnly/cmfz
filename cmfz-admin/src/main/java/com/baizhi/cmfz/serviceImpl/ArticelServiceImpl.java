@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Date;
+import java.util.List;
 import java.util.UUID;
 
 /**
@@ -39,5 +40,10 @@ public class ArticelServiceImpl implements ArticleService {
             return false;
         }
 
+    }
+
+    @Override
+    public List<Article> showAll() {
+        return articleDao.selectAllArticle();
     }
 }

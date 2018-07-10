@@ -1,9 +1,9 @@
 package com.baizhi.cmfz.manager;
 
-import com.baizhi.cmfz.dao.PictureDao;
+import com.baizhi.cmfz.entity.Article;
 import com.baizhi.cmfz.entity.Picture;
+import com.baizhi.cmfz.service.ArticleService;
 import com.baizhi.cmfz.service.PictureService;
-import org.apache.ibatis.annotations.Param;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -85,6 +85,15 @@ public class PictureTest {
         boolean b = pictureServiceImpl.modifyPicture(picture);
         System.out.println(b);
 
+
+    }
+
+    @Test
+    public void selectArticle(){
+        ApplicationContext context = new ClassPathXmlApplicationContext("application.xml");
+        ArticleService articleService = (ArticleService) context.getBean("articelServiceImpl");
+        List<Article> articles = articleService.showAll();
+        System.out.println(articles);
 
     }
 

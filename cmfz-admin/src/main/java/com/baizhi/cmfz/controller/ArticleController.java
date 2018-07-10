@@ -15,6 +15,7 @@ import org.springframework.web.multipart.MultipartFile;
 import javax.servlet.http.HttpServletRequest;
 import java.io.File;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 
 /**
@@ -73,6 +74,16 @@ public class ArticleController {
 
         return b+"";
 
+    }
+
+    @RequestMapping(value = "/showArticle",produces = "application/json;charset=utf-8")
+    @ResponseBody
+    public String showArticle(){
+        List<Article> articles = articleService.showAll();
+        System.out.println("==============================="
+        );
+        System.out.println(articles);
+        return JSON.toJSONString(articles);
     }
 
 }

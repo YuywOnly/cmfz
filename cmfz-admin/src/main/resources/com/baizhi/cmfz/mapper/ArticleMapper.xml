@@ -17,4 +17,8 @@
 
     </insert>
 
+    <select id="selectAllArticle" resultType="Article">
+        SELECT * FROM t_article
+    </select>
+
 </mapper>

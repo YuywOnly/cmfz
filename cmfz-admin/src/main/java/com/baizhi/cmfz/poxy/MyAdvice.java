@@ -52,7 +52,7 @@ public class MyAdvice {
 
 
         //获取数据源类型(操作的为哪一个service)
-        MethodSignature signature = (MethodSignature)pjp.getSignature();
+        MethodSignature signature = (MethodSignature)pjp.getSignature();//
         Method method = signature.getMethod();
         Class<?> declaringClass = method.getDeclaringClass();
 

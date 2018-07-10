@@ -30,6 +30,8 @@
 			var newName = decodeURI(name,"UTF-8");
 			$("#managerName").val(newName);
 
+
+
             $("#loginForm").form({
 
             });

@@ -26,7 +26,7 @@
                 view: detailview,
                 detailFormatter: function(rowIndex, rowData){
                     return '<table><tr>' +
-                        '<td rowspan=2 style="border:0"><img src="upload/picture' + rowData.picturePath+'" style="height:150px;"></td>' +
+                        '<td rowspan=2 style="border:0"><img src="upload/picture/' + rowData.picturePath+'" style="height:150px;"></td>' +
                         '</tr></table>';
                 },
                 toolbar:[{
@@ -37,7 +37,7 @@
                             title:"添加轮播图片",
                             width:400,
                             height:200,
-                            href: "${pageContext.request.contextPath}/addMaster.jsp",
+                            href: "${pageContext.request.contextPath}/addPicture.jsp",
                             modal: true
                         });
                     }

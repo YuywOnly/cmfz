@@ -43,7 +43,7 @@
                     text: '删除上师',
                     handler: function () {
                         var rowData = $("#masterTab").datagrid("getSelected");
-                        console.log(rowData.id);
+                        // console.log(rowData.id);
                         if (rowData == null) {
                             $.messager.alert('警告', '请先选中数据');
                         } else {

@@ -11,7 +11,7 @@ public class Picture implements Serializable {
   private String pictureId;
   private String picturePath;
 
-  @JSONField(format = "yyyy-MM-dd hh:mm:ss")
+  @JSONField(format = "yyyy-MM-dd HH:mm:ss")
   private Date pictureDate;
   private String pictureDescription;
   private long pictureStatus;

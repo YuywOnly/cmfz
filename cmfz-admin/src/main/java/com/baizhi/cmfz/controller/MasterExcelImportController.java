@@ -45,6 +45,8 @@ public class MasterExcelImportController {
         importParams.setNeedVerfiy(true);
 
         try {
+
+
             ExcelImportResult<Master> result = ExcelImportUtil.importExcelMore(file.getInputStream(), Master.class,
                     importParams);
 
@@ -60,7 +62,10 @@ public class MasterExcelImportController {
                 System.out.println(master);
 
             }
+
+            //把验证通过的数据上传到数据库
             masterService.addMaster(successList);
+
             for (Master master : failList) {
                 log.info("失败列表信息:" + master);
             }

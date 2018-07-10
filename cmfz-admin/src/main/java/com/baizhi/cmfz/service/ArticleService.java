@@ -2,6 +2,8 @@ package com.baizhi.cmfz.service;
 
 import com.baizhi.cmfz.entity.Article;
 
+import java.util.List;
+
 /**
  * @program: cmfz
  * @description:
@@ -12,4 +14,6 @@ import com.baizhi.cmfz.entity.Article;
 public interface ArticleService {
 
     public Boolean addArticle(Article article);
+
+    public List<Article> showAll();
 }
