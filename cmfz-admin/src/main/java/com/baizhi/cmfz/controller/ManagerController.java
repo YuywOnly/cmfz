@@ -34,17 +34,19 @@ public class ManagerController {
     private ManagerService managerService;
 
     @RequestMapping("/login")
-    public @ResponseBody String login(String code, Manager manager,
-                   HttpSession session,HttpServletResponse resquest, String check) throws Exception{
+    public @ResponseBody String login(String code, Manager manager,HttpServletRequest request,
+                   HttpSession session,HttpServletResponse response, boolean check) throws Exception{
 
         if(code.equalsIgnoreCase((String)session.getAttribute("code"))){
             if(managerService.login(manager.getManagerName(),manager.getManagerPassword()) != null){
 
-                if(check!=null){
+                if(check){
+                    System.out.println("hhh");
                     String managerName = URLEncoder.encode(manager.getManagerName(), "UTF-8");
                     Cookie cookie = new Cookie("managerName",managerName);
+                    cookie.setPath(request.getContextPath());
                     cookie.setMaxAge(60*60*24*7);
-                    resquest.addCookie(cookie);
+                    response.addCookie(cookie);
                 }
 
                 session.setAttribute("managerName",manager.getManagerName());

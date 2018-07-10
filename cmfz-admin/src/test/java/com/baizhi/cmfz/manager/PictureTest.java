@@ -50,7 +50,7 @@ public class PictureTest {
     @Test
     public void addTest(){
         Picture picture = new Picture();
-        String path = "30.jpg";
+        String path = "38.jpg";
         String des = "图片";
         Integer status = 0;
         picture.setPicturePath(path);
@@ -59,7 +59,7 @@ public class PictureTest {
         ApplicationContext context = new ClassPathXmlApplicationContext("application.xml");
         PictureService pictureServiceImpl = (PictureService) context.getBean("pictureServiceImpl");
         boolean b = pictureServiceImpl.addPicture(picture);
-        System.out.println(b);
+//        System.out.println(b);
 
 
     }
